@@ -24,3 +24,16 @@ C:\Users\V.Makeev\Desktop\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.
 C:\Users\V.Makeev\Desktop\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.dll
 C:\Users\V.Makeev\Desktop\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.pdb
 C:\Users\V.Makeev\Desktop\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.genruntimeconfig.cache
+D:\Projects\LocalChat\LocalChat\bin\Debug\netcoreapp3.1\LocalChat.exe
+D:\Projects\LocalChat\LocalChat\bin\Debug\netcoreapp3.1\LocalChat.deps.json
+D:\Projects\LocalChat\LocalChat\bin\Debug\netcoreapp3.1\LocalChat.runtimeconfig.json
+D:\Projects\LocalChat\LocalChat\bin\Debug\netcoreapp3.1\LocalChat.runtimeconfig.dev.json
+D:\Projects\LocalChat\LocalChat\bin\Debug\netcoreapp3.1\LocalChat.dll
+D:\Projects\LocalChat\LocalChat\bin\Debug\netcoreapp3.1\LocalChat.pdb
+D:\Projects\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.csprojAssemblyReference.cache
+D:\Projects\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.AssemblyInfoInputs.cache
+D:\Projects\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.AssemblyInfo.cs
+D:\Projects\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.csproj.CoreCompileInputs.cache
+D:\Projects\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.dll
+D:\Projects\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.pdb
+D:\Projects\LocalChat\LocalChat\obj\Debug\netcoreapp3.1\LocalChat.genruntimeconfig.cache

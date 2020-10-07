@@ -1,8 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\V.Makeev\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\V.Makeev\\.nuget\\packages"
+      "C:\\Users\\ctapb\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ctapb\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }

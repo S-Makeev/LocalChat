@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 
 namespace LocalChat
 {
@@ -7,45 +6,23 @@ namespace LocalChat
     {
         static void Main(string[] args)
         {
-            User user = new User();
-
-            Console.WriteLine("Please, enter your age: ");
-            user.age = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Enter your name: ");
-            user.Name = Console.ReadLine();
-            user.sayHello();
+            var user = new User();
+            user.InitUser();
 
             while (true)
             {
-                Console.Write($">{user.Name}:");
-                var input = Console.ReadLine();
+                var input = RequestComman(user);
 
                 switch (input.ToLower())
                 {
                     case "/login":
-                        //Temporary construct
-                        var UserLogin = new UserLogin<string>("12345", "androidcelso@gmail.com");
-                        if (UserLogin != null)
-                        {
-                            Console.WriteLine("Your login is successfull!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Your login attempt has failed");
-                        }
+                        var loginCommand = new LoginCommand(user);
+                        loginCommand.Execute();
                         break;
 
                     case "/showip":
-                        {
-                            Console.WriteLine("Enter your address: ");
-                            string IPgive = Console.ReadLine();
-                            IPHostEntry host1 = Dns.GetHostEntry($"{IPgive}");
-                            Console.WriteLine(host1.HostName);
-                            foreach (IPAddress ip in host1.AddressList)
-                                Console.WriteLine(ip.ToString());
-                            Console.WriteLine("Here's the list of IP addresses we located.");
-                        }
+                        var showIpCommand = new ShowIpCmd();
+                        showIpCommand.ShowIp();
                         break;
 
                     case "/exit":
@@ -53,6 +30,29 @@ namespace LocalChat
                         break;
                 }
             }
+        }
+
+        private static string RequestComman(User user)
+        {
+            Console.Write($"\n>");
+
+            if (user.IsAuthorized)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($" [auth]");
+                Console.ResetColor();
+            }
+
+            if (user.IsAdmin)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write($" [admin]");
+                Console.ResetColor();
+            }
+            Console.Write($" {user.Name}: ");
+
+            var input = Console.ReadLine();
+            return input;
         }
     }
 }
