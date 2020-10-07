@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\V.Makeev\\.nuget\\packages\\": {}
+    "C:\\Users\\ctapb\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\V.Makeev\\Desktop\\LocalChat\\LocalChat\\LocalChat.csproj",
+      "projectUniqueName": "D:\\Projects\\LocalChat\\LocalChat\\LocalChat.csproj",
       "projectName": "LocalChat",
-      "projectPath": "C:\\Users\\V.Makeev\\Desktop\\LocalChat\\LocalChat\\LocalChat.csproj",
-      "packagesPath": "C:\\Users\\V.Makeev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\V.Makeev\\Desktop\\LocalChat\\LocalChat\\obj\\",
+      "projectPath": "D:\\Projects\\LocalChat\\LocalChat\\LocalChat.csproj",
+      "packagesPath": "C:\\Users\\ctapb\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\LocalChat\\LocalChat\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\V.Makeev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ctapb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

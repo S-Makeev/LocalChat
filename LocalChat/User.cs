@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LocalChat
 {
@@ -12,27 +10,32 @@ namespace LocalChat
 
         public string Email { get; set; }
 
-        public int age;
+        public bool IsAdmin { get; set; }
+        public bool IsAuthorized { get; set; }
+
+
+        private int _age;
         public int Age
         {
-            get { return age; }
+            get { return _age; }
             set
             {
                 if (value >= 18)
                 {
-                    age = value;
+                    _age = value;
                 }
             }
         }
 
-        public void sayHello()
+        public void InitUser()
         {
+            Console.WriteLine("Please, enter your age: ");
+            _age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter your name: ");
+            Name = Console.ReadLine();
+
             Console.WriteLine($"Welcome, {Name}!");
         }
-
-        /* public override string ToString()
-         {
-             return "Welcome, user: " + name;
-         }*/
     }
 }
