@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\V.Makeev\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\V.Makeev\\.nuget\\packages"
+    ]
+  }
+}
