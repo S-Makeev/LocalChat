@@ -4,8 +4,12 @@ namespace LocalChat
 {
     class Program
     {
+        static IConsole _console;
+
         static void Main(string[] args)
         {
+            _console = new DefaultConsole();
+
             var user = new User();
             user.InitUser();
 
@@ -16,7 +20,7 @@ namespace LocalChat
                 switch (input.ToLower())
                 {
                     case "/login":
-                        var loginCommand = new LoginCommand(user);
+                        var loginCommand = new LoginCommand(user, _console);
                         loginCommand.Execute();
                         break;
 
@@ -28,30 +32,38 @@ namespace LocalChat
                     case "/exit":
                         Environment.Exit(0);
                         break;
+
+                    case "/scd":
+                        _console = new DefaultConsole();
+                        break;
+
+                    case "/scc":
+                        _console = new MockConsole();
+                        break;
                 }
             }
         }
 
         private static string RequestComman(User user)
         {
-            Console.Write($"\n>");
+            _console.Write($"\n>");
 
             if (user.IsAuthorized)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write($" [auth]");
-                Console.ResetColor();
+                _console.ForegroundColor = ConsoleColor.Green;
+                _console.Write($" [auth]");
+                _console.ResetColor();
             }
 
             if (user.IsAdmin)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write($" [admin]");
-                Console.ResetColor();
+                _console.ForegroundColor = ConsoleColor.Red;
+                _console.Write($" [admin]");
+                _console.ResetColor();
             }
-            Console.Write($" {user.Name}: ");
+            _console.Write($" {user.Name}: ");
 
-            var input = Console.ReadLine();
+            var input = _console.ReadLine();
             return input;
         }
     }

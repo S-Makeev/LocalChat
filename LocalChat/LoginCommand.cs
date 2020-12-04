@@ -5,40 +5,42 @@ namespace LocalChat
     public class LoginCommand
     {
         public User User { get; set; }
+        private readonly IConsole Consol;
 
-        public LoginCommand(User user)
+        public LoginCommand(User user, IConsole consol)
         {
             User = user;
+            Consol = consol;
         }
 
         public void Execute()
         {
-            Console.Write("$ Enter your login: ");
-            var login = Console.ReadLine();
+            Consol.Write("$ Enter your login: ");
+            var login = Consol.ReadLine();
 
-            Console.Write("$ Enter your pass: ");
+            Consol.Write("$ Enter your pass: ");
             var pass = Console.ReadLine();
 
             if (login == "login" && pass == "pass")
             {
                 User.IsAuthorized = true;
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("$ Login success!");
-                Console.ResetColor();
+                Consol.ForegroundColor = ConsoleColor.Green;
+                Consol.WriteLine("$ Login success!");
+                Consol.ResetColor();
             }
             else if (login == "admin" && pass == "12345")
             {
                 User.IsAuthorized = true;
                 User.IsAdmin = true;
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("$ [ADMIN] Login success!");
-                Console.ResetColor();
+                Consol.ForegroundColor = ConsoleColor.Green;
+                Consol.WriteLine("$ [ADMIN] Login success!");
+                Consol.ResetColor();
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("$ Login fail!");
-                Console.ResetColor();
+                Consol.ForegroundColor = ConsoleColor.Red;
+                Consol.WriteLine("$ Login fail!");
+                Consol.ResetColor();
             }
         }
     }
